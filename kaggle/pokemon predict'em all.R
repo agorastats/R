@@ -38,6 +38,7 @@ pokemon %>% select(grep("cellId",names(.),ignore.case = T)) %>% head(1000) %>%
 
 
 
+
 ## pokemon id
 
 pokemon %>% group_by(pokemonId) %>% tally() %>% 
