@@ -1,3 +1,6 @@
+# Exists a nice package for make change in .js
+# look pluralize.js => only english version 
+
 substitute.all <- function(pattern, replacement, x) {
   idx <- match(x, pattern)
   return(ifelse(is.na(idx), x, replacement[idx]))
@@ -6,6 +9,10 @@ substitute.all <- function(pattern, replacement, x) {
 ## BCN open data 
 ## some rows of textdata
 require(tidyr)
+
+canvis <- c("espais","publics")
+canvi <- c("espai","public")
+
 bigram_filtered <- textdata[21:30,] %>%
   
   mutate(TEXT = iconv(TEXT,from="UTF-8",to="ASCII//TRANSLIT")) %>% 
